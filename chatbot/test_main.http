@@ -1,0 +1,91 @@
+# Test your FastAPI endpoints
+
+GET http://127.0.0.1:8000/
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/hello/User
+Accept: application/json
+
+###
+
+POST http://127.0.0.1:8000/message
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 3,
+  "username": "unauthorized user",
+  "message_text": "Subidubi",
+  "create_time": "2024.01.25T22:00:00"
+}
+
+###
+
+### Send a form with the text and file fields
+#POST https://httpbin.org/post
+POST http://127.0.0.1:8000/token
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+secret
+--WebAppBoundary--
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3ODM3MTA2fQ.qn6fmiZ47kJwbWLZXdKBvuMGEN6Be18b0jt1CgrFC6o
+Accept: application/json
+Content-Type: application/json
+
+{
+  "id": 3,
+  "username": "johndoe",
+  "message_text": "Subidubi",
+  "create_time": "2024.01.25T23:00:00"
+}
+
+###
+
+GET http://127.0.0.1:8000/messages
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/messages?limit=1&offset=1
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/messages?user=other user
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/messages?user=username
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/message/2
+Accept: application/json
+
+###
+
+DELETE http://127.0.0.1:8000/message/1
+Accept: application/json
+
+###
+
+DELETE http://127.0.0.1:8000/message/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3ODM3MTA2fQ.qn6fmiZ47kJwbWLZXdKBvuMGEN6Be18b0jt1CgrFC6o
+Accept: application/json
