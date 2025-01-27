@@ -43,15 +43,26 @@ secret
 ###
 
 POST http://127.0.0.1:8000/message
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3ODM3MTA2fQ.qn6fmiZ47kJwbWLZXdKBvuMGEN6Be18b0jt1CgrFC6o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
 Accept: application/json
 Content-Type: application/json
 
 {
-  "id": 3,
+  "role": "system",
   "username": "johndoe",
-  "message_text": "Subidubi",
-  "create_time": "2024.01.25T23:00:00"
+  "message_text": "ez legyen a kontextus..."
+}
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "johndoe",
+  "message_text": "egy üezenet a liftből..."
 }
 
 ###
@@ -87,5 +98,5 @@ Accept: application/json
 ###
 
 DELETE http://127.0.0.1:8000/message/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3ODM3MTA2fQ.qn6fmiZ47kJwbWLZXdKBvuMGEN6Be18b0jt1CgrFC6o
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
 Accept: application/json
