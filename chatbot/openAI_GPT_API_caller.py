@@ -10,9 +10,6 @@ import os
 import tiktoken as tiktoken
 from openai import OpenAI
 
-from pydantic import typing
-import json
-
 
 OpenAI.api_key = os.environ.get("OPENAI")
 default_model_name = "gpt-3.5-turbo"
@@ -30,37 +27,6 @@ accepted_role_names = [SYSTEM_ROLE, USER_ROLE, ASSISTANT_ROLE]
     'user' messages describe what you want the AI assistant to say.
     'assistant' messages describe previous responses in the conversation.
 '''
-
-class RoledMessage:
-    """Message with role for conversation
-        (MessageWithRole maybe grammatical correct, but more expressive order and dialogue form)
-        The first message should be a system message.
-        Additional messages should alternate between the user and the assistant.
-    """
-    role: str
-    content: str
-
-
-def call_GPT_API_chat_completion_with_raw_response(
-        roled_conversation_context: list[RoledMessage],
-        model_name: typing.Union[str, None]):
-    """call OpenAI GPT version 3.5 API chat completion with model and messages, later is user-GPT conversation context
-
-    :param roled_conversation_context messages with actor role of message, that will well form on this JSON way
-    messages=[{"role": "system", "content": 'SPECIFY HOW THE AI ASSISTANT SHOULD BEHAVE'},
-              {"role": "user", "content": 'SPECIFY WANT YOU WANT THE AI ASSISTANT TO SAY'}]
-    :param model_name: optional parameter for override default model name
-    (if value None of it, then default model name apply)
-   :return response of GPT
-    """
-    #roled_conversation_context_json: str = json.dumps(roled_conversation_context)
-    client = OpenAI()
-    response = client.chat.completions.create(
-    #response = openai.ChatCompletion.create(
-        model=default_model_name if model_name is None else model_name,
-        messages=roled_conversation_context
-    )
-    return response
 
 
 def call_GPT_API_chat_completion_with_message_response(
