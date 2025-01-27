@@ -1,12 +1,9 @@
-"""Message data model module
+"""Message data model module"""
 
-...
-
-"""
 from datetime import datetime
 
 from pydantic import typing
-from sqlmodel import Field, SQLModel, Column, Integer
+from sqlmodel import Field, SQLModel
 
 
 class Message(SQLModel, table=True):

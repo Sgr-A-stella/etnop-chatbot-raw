@@ -1,8 +1,13 @@
 """OpenAI GPT API integration module
 
+Note that OpenAI charges to use the GPT API. (Free credits are sometimes provided to new users,
+but who gets credit and how long this deal will last is not transparent.) It costs $0.002 / 1000 tokens,
+where 1000 tokens equal about 750 words.
 """
 
 import os
+
+import tiktoken as tiktoken
 from openai import OpenAI
 
 from pydantic import typing
@@ -90,3 +95,10 @@ def call_GPT_API_chat_completion_with_message_response(
     assert status_code == "stop", f"The status code was {status_code}."
 
     return response["choices"][0]["message"]["content"]
+
+
+def num_tokens_from_string(string: str, encoding_name: str) -> int:
+    """Returns the number of tokens in a text string for user message limiting."""
+    encoding = tiktoken.get_encoding(encoding_name)
+    num_tokens = len(encoding.encode(string))
+    return num_tokens

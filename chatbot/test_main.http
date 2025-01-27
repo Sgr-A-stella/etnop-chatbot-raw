@@ -25,7 +25,7 @@ Content-Type: application/json
 
 ### Send a form with the text and file fields
 #POST https://httpbin.org/post
-POST http://127.0.0.1:8000/token
+POST http://127.0.0.1:8000/login
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
 --WebAppBoundary
@@ -50,7 +50,7 @@ Content-Type: application/json
 {
   "role": "system",
   "username": "johndoe",
-  "message_text": "ez legyen a kontextus..."
+  "message_text": "ez legyen a végső szó."
 }
 
 ###
@@ -99,4 +99,9 @@ Accept: application/json
 
 DELETE http://127.0.0.1:8000/message/1
 Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
+Accept: application/json
+
+###
+
+GET http://127.0.0.1:8000/logout
 Accept: application/json
