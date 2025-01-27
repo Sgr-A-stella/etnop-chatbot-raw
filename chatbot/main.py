@@ -30,7 +30,7 @@ from sqlmodel import SQLModel
 from starlette import status
 
 import mock_AI_chatbot
-import nomicAI_GPT4All_caller
+# import nomicAI_GPT4All_caller
 import openAI_GPT_API_caller
 import settings
 from config_loader import load_config

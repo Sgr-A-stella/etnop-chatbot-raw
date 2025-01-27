@@ -53,12 +53,12 @@ def call_GPT_API_chat_completion_with_raw_response(
     (if value None of it, then default model name apply)
    :return response of GPT
     """
-    roled_conversation_context_json: str = json.dumps(roled_conversation_context)
+    #roled_conversation_context_json: str = json.dumps(roled_conversation_context)
     client = OpenAI()
     response = client.chat.completions.create(
     #response = openai.ChatCompletion.create(
         model=default_model_name if model_name is None else model_name,
-        messages=roled_conversation_context_json
+        messages=roled_conversation_context
     )
     return response
 

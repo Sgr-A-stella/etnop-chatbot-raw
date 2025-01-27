@@ -8,7 +8,7 @@ from fastapi.params import Depends
 from pydantic import BaseModel
 from pydantic import typing
 
-from oauth2_token import TokenData, oauth2_scheme, verify_password, get_username_from_token
+from oauth2_token import oauth2_scheme, verify_password, get_username_from_token  # , TokenData
 from mock_datastore import fake_users_db
 
 from business_exception import credentials_exception

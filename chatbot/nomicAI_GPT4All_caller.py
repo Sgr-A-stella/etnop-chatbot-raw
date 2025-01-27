@@ -51,7 +51,7 @@ def generate_response(message: str, model: typing.Union[GPT4All, None]):
     if new_model.current_chat_session is None:
         return model.generate(message)
     else:
-        with model.current_chat_session():
+        with model.current_chat_session:
             return model.generate(message)
 
 

@@ -50,7 +50,7 @@ Content-Type: application/json
 {
   "role": "system",
   "username": "johndoe",
-  "message_text": "ez legyen a végső szó."
+  "message_text": "43."
 }
 
 ###
