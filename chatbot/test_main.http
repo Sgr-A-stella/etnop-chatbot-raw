@@ -21,10 +21,38 @@ Content-Type: application/json
   "create_time": "2024.01.25T22:00:00"
 }
 
-###
+### Send a form with form text fields for register user
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
 
-### Send a form with the text and file fields
-#POST https://httpbin.org/post
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary--
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary--
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+### Send a form with form text fields for login
 POST http://127.0.0.1:8000/login
 Content-Type: multipart/form-data; boundary=WebAppBoundary
 
@@ -43,26 +71,26 @@ secret
 ###
 
 POST http://127.0.0.1:8000/message
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTk4ODcxfQ.30MliCDtOtoSg7oHjFyzVQNifHItt41mnKxX91aXKLM
 Accept: application/json
 Content-Type: application/json
 
 {
   "role": "system",
-  "username": "johndoe",
-  "message_text": "43."
+  "username": "telcselek",
+  "message_text": "42"
 }
 
 ###
 
 POST http://127.0.0.1:8000/message
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgxOTMwNjV9.vD4dbTZ5QODuwiXJR4VOyBYQEtqBImOClkBXXi0cjl4
 Accept: application/json
 Content-Type: application/json
 
 {
-  "username": "johndoe",
-  "message_text": "egy üezenet a liftből..."
+  "username": "telcselek",
+  "message_text": "itt járt Mátyás király..."
 }
 
 ###
@@ -82,7 +110,7 @@ Accept: application/json
 
 ###
 
-GET http://127.0.0.1:8000/messages?user=username
+GET http://127.0.0.1:8000/messages?user=telcselek
 Accept: application/json
 
 ###
@@ -98,10 +126,11 @@ Accept: application/json
 ###
 
 DELETE http://127.0.0.1:8000/message/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM3OTM0MjE4fQ.gMIKTX3xFwuWrzizUrIreZTAO04jKs-vW7nx7IXoDrA
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
 Accept: application/json
 
 ###
 
 GET http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
 Accept: application/json

@@ -16,10 +16,6 @@ default_model_name = "gpt-3.5-turbo"
 accepted_model_names = ["gpt-3.5-turbo", "gpt-4o-mini"]
 # exists more model names, for current model names and aliases see: https://platform.openai.com/docs/models/overview
 
-SYSTEM_ROLE = "system"
-USER_ROLE = "user"
-ASSISTANT_ROLE = "assistant"
-accepted_role_names = [SYSTEM_ROLE, USER_ROLE, ASSISTANT_ROLE]
 '''There are three types of message documented in the Introduction to the Chat documentation:
 
     'system' messages describe the behavior of the AI assistant. A useful system message for data science use cases is 

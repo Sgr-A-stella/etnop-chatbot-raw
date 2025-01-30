@@ -12,14 +12,27 @@ from passlib.context import CryptContext
 from pydantic import BaseModel
 from pydantic import typing
 
+import config_loader
 from business_exception import credentials_exception
 
 
 # to get a string like this run:
 # openssl rand -hex 32
-SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 30
+DEFAULT_SECRET_KEY = "09d25e094faa6ca2556c818166b7a9563b93f7099f6f0f4caa6cf63b88e8d3e7"
+DEFAULT_ALGORITHM = "HS256"
+DEFAULT_ACCESS_TOKEN_EXPIRE_MINUTES = 30
+
+token_config = config_loader.load_config(section="token")
+
+# use config or default values
+SECRETKEY_KEY = "secretkey"
+secret_key = token_config[SECRETKEY_KEY] if token_config[SECRETKEY_KEY] is not None else DEFAULT_SECRET_KEY
+ALGORITHM_KEY = "algorithm"
+algorithm = token_config[ALGORITHM_KEY] if token_config[ALGORITHM_KEY] is not None else DEFAULT_ALGORITHM
+EXPIRE_KEY = "expire"
+access_token_expire_minutes = int(token_config[EXPIRE_KEY]) if token_config[EXPIRE_KEY] is not None \
+    else DEFAULT_ACCESS_TOKEN_EXPIRE_MINUTES
+
 
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="token")
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")
@@ -35,14 +48,14 @@ class TokenData(BaseModel):
 
 
 def create_access_token(data: dict):
-    expires_delta: typing.Union[timedelta, None] = timedelta(minutes=ACCESS_TOKEN_EXPIRE_MINUTES)
+    expires_delta: typing.Union[timedelta, None] = timedelta(minutes=access_token_expire_minutes)
     to_encode = data.copy()
     if expires_delta:
         expire = datetime.now(timezone.utc) + expires_delta
     else:
         expire = datetime.now(timezone.utc) + timedelta(minutes=15)
     to_encode.update({"exp": expire})
-    encoded_jwt = jwt.encode(to_encode, SECRET_KEY, algorithm=ALGORITHM)
+    encoded_jwt = jwt.encode(to_encode, secret_key, algorithm=algorithm)
     return encoded_jwt
 
 
@@ -56,7 +69,7 @@ def get_password_hash(password):
 
 def get_username_from_token(token: Annotated[str, Depends(oauth2_scheme)]):
     try:
-        payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+        payload = jwt.decode(token, secret_key, algorithms=[algorithm])
         username: str = payload.get("sub")
 
         if username is None:

@@ -1,6 +1,10 @@
-"""User module for user management"""
+"""User module for user management
 
+TODO: mock DB logic only, missed RDBMS logic
+"""
+import json
 from typing import Annotated
+import logging
 
 from fastapi import HTTPException
 from fastapi.params import Depends
@@ -8,16 +12,18 @@ from fastapi.params import Depends
 from pydantic import BaseModel
 from pydantic import typing
 
-from oauth2_token import oauth2_scheme, verify_password, get_username_from_token  # , TokenData
+import oauth2_token
+from oauth2_token import oauth2_scheme, verify_password, get_username_from_token, TokenData
 from mock_datastore import fake_users_db
 
 from business_exception import credentials_exception
 
+logger = logging.getLogger('uvicorn.error')
 
 class User(BaseModel):
     username: str
-    email: typing.Union[str, None] = None
     full_name: typing.Union[str, None] = None
+    email: typing.Union[str, None] = None
     disabled: typing.Union[bool, None] = None
 
 
@@ -28,6 +34,7 @@ class UserInDB(User):
 def get_user(db, username: str):
     if username in db:
         user_dict = db[username]
+        logger.info(user_dict)
         return UserInDB(**user_dict)
 
 
@@ -55,3 +62,14 @@ def authenticate_user(fake_db, username: str, password: str):
     if not verify_password(password, user.hashed_password):
         return False
     return user
+
+
+def create_new_user(db, username: str, password: str, email: str, full_name: str):
+    if username in db:
+        raise HTTPException(status_code=400, detail="Exist user")
+    hashed_password = oauth2_token.get_password_hash(password)
+    user_in_db = UserInDB(username=username, full_name=full_name, email=email, disabled=False, hashed_password=hashed_password)
+    print(user_in_db.model_dump(mode='json'))
+    db.update({username: user_in_db.model_dump(mode='json')})
+    logger.info(db)
+    return authenticate_user(db, username, password)
