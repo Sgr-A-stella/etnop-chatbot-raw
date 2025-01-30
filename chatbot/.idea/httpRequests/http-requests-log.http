@@ -1,0 +1,1440 @@
+GET http://127.0.0.1:8000/messages
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T031510.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgyMDUwNTB9.88pOxu58RQ4-2J-IYmr0zNzL-TwhzBBy_He23EMi9Lc
+Accept: application/json
+Content-Type: application/json
+Content-Length: 80
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "telcselek",
+  "message_text": "itt járt Mátyás király..."
+}
+
+<> 2025-01-30T031505.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgyMDUwNTB9.88pOxu58RQ4-2J-IYmr0zNzL-TwhzBBy_He23EMi9Lc
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "role": "system",
+  "username": "telcselek",
+  "message_text": "42"
+}
+
+<> 2025-01-30T031446.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-30T031410.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTk4ODcxfQ.30MliCDtOtoSg7oHjFyzVQNifHItt41mnKxX91aXKLM
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "role": "system",
+  "username": "telcselek",
+  "message_text": "42"
+}
+
+<> 2025-01-30T013348.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTk4ODcxfQ.30MliCDtOtoSg7oHjFyzVQNifHItt41mnKxX91aXKLM
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "role": "system",
+  "username": "telcselek",
+  "message_text": "42"
+}
+
+<> 2025-01-30T013146.500.txt
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 293
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+secret
+--WebAppBoundary--
+
+<> 2025-01-30T013111.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-30T013033.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-30T012851.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-30T012756.500.txt
+
+###
+
+POST http://127.0.0.1:8000/message
+Accept: application/json
+Content-Type: application/json
+Content-Length: 118
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "id": 3,
+  "username": "unauthorized user",
+  "message_text": "Subidubi",
+  "create_time": "2024.01.25T22:00:00"
+}
+
+<> 2025-01-30T012749.401.json
+
+###
+
+GET http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T012735.200.json
+
+###
+
+GET http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T012646.200.json
+
+###
+
+GET http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T012601.422.json
+
+###
+
+GET http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T012445.422.json
+
+###
+
+POST http://127.0.0.1:8000/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTkwMzUwfQ.g1TGB6ovuxiPR3sZ46KogcDJRH_RTdv4XJvSqhRYxU8
+Accept: application/json
+Content-Length: 0
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T012250.422.json
+
+###
+
+GET http://127.0.0.1:8000/messages?user=telcselek
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T000358.200.json
+
+###
+
+GET http://127.0.0.1:8000/messages?user=username
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T000343.200.json
+
+###
+
+GET http://127.0.0.1:8000/messages
+Accept: application/json
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+<> 2025-01-30T000326.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgxOTMwNjV9.vD4dbTZ5QODuwiXJR4VOyBYQEtqBImOClkBXXi0cjl4
+Accept: application/json
+Content-Type: application/json
+Content-Length: 80
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "username": "telcselek",
+  "message_text": "itt járt Mátyás király..."
+}
+
+<> 2025-01-30T000313.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgxOTMwNjV9.vD4dbTZ5QODuwiXJR4VOyBYQEtqBImOClkBXXi0cjl4
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "role": "system",
+  "username": "telcselek",
+  "message_text": "42"
+}
+
+<> 2025-01-30T000150.200.json
+
+###
+
+POST http://127.0.0.1:8000/message
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgxOTMwNjV9.vD4dbTZ5QODuwiXJR4VOyBYQEtqBImOClkBXXi0cjl4
+Accept: application/json
+Content-Type: application/json
+Content-Length: 73
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "role": "system",
+  "username": "telcselek",
+  "message_text": "42"
+}
+
+<> 2025-01-29T235556.400.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T235518.400.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T235425.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T235349.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T235030.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T234650.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T234626.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T234428.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T234330.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T234256.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T233442.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T233345.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T233122.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T233044.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232924.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232758.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232604.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232454.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232333.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232155.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T232042.500.txt
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 293
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+secret
+--WebAppBoundary--
+
+<> 2025-01-29T232034.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T231624.400.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T231606.400.json
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 293
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+secret
+--WebAppBoundary--
+
+<> 2025-01-29T231547.200.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T231512.500.txt
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 718
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T231307.400.json
+
+###
+
+POST http://127.0.0.1:8000/register
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 720
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="grant_type"
+Content-Type: text/plain
+
+password
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+telcselek
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+titok
+--WebAppBoundary
+Content-Disposition: form-data; name="email"
+Content-Type: text/plain
+
+telcselek@email.com
+--WebAppBoundary
+Content-Disposition: form-data; name="fullname"
+Content-Type: text/plain
+
+Telcs Elek
+--WebAppBoundary--
+
+<> 2025-01-29T231007.500.txt
+
+###
+
+POST http://127.0.0.1:8000/login
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+Content-Length: 293
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.10)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+--WebAppBoundary
+Content-Disposition: form-data; name="username"
+Content-Type: text/plain
+
+johndoe
+--WebAppBoundary
+Content-Disposition: form-data; name="password"
+Content-Type: text/plain
+
+secret
+--WebAppBoundary--
+
+<> 2025-01-29T230910.200.json
+
+###
+

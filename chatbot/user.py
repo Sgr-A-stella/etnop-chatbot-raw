@@ -2,7 +2,6 @@
 
 TODO: mock DB logic only, missed RDBMS logic
 """
-import json
 from typing import Annotated
 import logging
 
@@ -13,7 +12,7 @@ from pydantic import BaseModel
 from pydantic import typing
 
 import oauth2_token
-from oauth2_token import oauth2_scheme, verify_password, get_username_from_token, TokenData
+from oauth2_token import oauth2_scheme, verify_password, get_username_from_token
 from mock_datastore import fake_users_db
 
 from business_exception import credentials_exception
@@ -41,8 +40,6 @@ def get_user(db, username: str):
 
 def get_current_user(token: Annotated[str, Depends(oauth2_scheme)]):
     username: str = get_username_from_token(token)
-    #token_data = TokenData(username=username)
-    #user = get_user(fake_users_db, username=token_data.username)
     user = get_user(fake_users_db, username=username)
     if user is None:
         raise credentials_exception

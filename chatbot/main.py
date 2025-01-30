@@ -23,7 +23,6 @@ import uvicorn
 import logging
 
 from fastapi import FastAPI, HTTPException
-from fastapi.openapi.models import Response
 from fastapi.params import Depends
 from fastapi.security import OAuth2PasswordRequestForm
 
@@ -133,7 +132,7 @@ def create_message(message: Message, session: SessionDep, token: Annotated[str, 
         .where(Message.username == message.username) \
         .limit(1) \
         .all()
-    if previous_user_message is not None and (len(previous_user_message) == 0 or (len(previous_user_message) > 0 \
+    if previous_user_message is not None and (len(previous_user_message) == 0 or (len(previous_user_message) > 0
             and previous_user_message[0].role != user_message_role)):
         # execute if role of last message is not user role only: provide order system-user-assistant-user-assistant
 

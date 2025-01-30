@@ -71,7 +71,7 @@ secret
 ###
 
 POST http://127.0.0.1:8000/message
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqb2huZG9lIiwiZXhwIjoxNzM4MTk4ODcxfQ.30MliCDtOtoSg7oHjFyzVQNifHItt41mnKxX91aXKLM
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgyMDUwNTB9.88pOxu58RQ4-2J-IYmr0zNzL-TwhzBBy_He23EMi9Lc
 Accept: application/json
 Content-Type: application/json
 
@@ -84,7 +84,7 @@ Content-Type: application/json
 ###
 
 POST http://127.0.0.1:8000/message
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgxOTMwNjV9.vD4dbTZ5QODuwiXJR4VOyBYQEtqBImOClkBXXi0cjl4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJ0ZWxjc2VsZWsiLCJleHAiOjE3MzgyMDUwNTB9.88pOxu58RQ4-2J-IYmr0zNzL-TwhzBBy_He23EMi9Lc
 Accept: application/json
 Content-Type: application/json
 
